@@ -29,6 +29,7 @@ namespace WarOfTwoSides.Models.DefaultValues
 		public const int PALADIN_STRENGHT = 3;
 		public const int PALADIN_DEFAULT_ATTACK_DEMAGE = 4;
 		public const int PALADIN_DEFAULT_MAGIC_DEMAGE = 5;
+		public const int PALADIN_DEFAULT_HOLY = 5;
 
 		public const int MONK_HEALTH = 5;
 		public const int MONK_STRENGHT = 2;
@@ -39,6 +40,7 @@ namespace WarOfTwoSides.Models.DefaultValues
 		public const int MAGE_STRENGHT = 1;
 		public const int MAGE_DEFAULT_ATTACK_DEMAGE = 1;
 		public const int MAGE_DEFAULT_MAGIC_DEMAGE = 9;
+		public const int MAGE_DEFAULT_MANA = 100;
 
 		public const int DEMON_HUNTER_HEALTH = 15;
 		public const int DEMON_HUNTER_STRENGHT = 5;
@@ -74,7 +76,7 @@ namespace WarOfTwoSides.Models.DefaultValues
 		public const int WARLOCK_STRENGHT = 1;
 		public const int WARLOCK_DEFAULT_ATTACK_DEMAGE = 1;
 		public const int WARLOCK_DEFAULT_MAGIC_DEMAGE = 2;
-
+		public const int WARLOCK_DEFAULT_KNOWLEDGE = 10;
 
 
 		public const int DEMONS_DEFAULT_HEALTH = 80;

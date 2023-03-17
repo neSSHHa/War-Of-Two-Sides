@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarOfTwoSides.Models.Utilitys.Armors.IArmors
+namespace WarOfTwoSides.Models.Utilitys.Armors.IArmor
 {
     public class IArmors
     {
@@ -14,5 +14,7 @@ namespace WarOfTwoSides.Models.Utilitys.Armors.IArmors
 		public int AttackEndurance { get; set; }
 		
 		public int Durability { get; set; }
+
+		public bool Broken { get; set; }
 	}
 }

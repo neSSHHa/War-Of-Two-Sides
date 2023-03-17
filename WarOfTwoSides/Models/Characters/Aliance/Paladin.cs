@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WarOfTwoSides.Models.Characters.Aliance
 {
-	internal class Paladin
+	public class Paladin
 	{
 	}
 }

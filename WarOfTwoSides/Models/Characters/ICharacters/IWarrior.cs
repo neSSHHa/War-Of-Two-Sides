@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WarOfTwoSides.Models.Utilitys.Armors.IArmors;
-using WarOfTwoSides.Models.Utilitys.Weapons.IWeapons;
+using WarOfTwoSides.Models.Utilitys.Weapons.IWeapon;
 
 namespace WarOfTwoSides.Models.Characters.ICharacters
 {

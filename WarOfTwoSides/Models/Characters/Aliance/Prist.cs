@@ -8,9 +8,9 @@ using WarOfTwoSides.Models.DefaultValues;
 
 namespace WarOfTwoSides.Models.Characters.Aliance
 {
-	public class Prist : Warrior
+	public class Prist : ChurchWarriors
 	{
-		public int Holy { get; set; }
+	
 
 		public Prist(string name)
 		: base
@@ -25,7 +25,7 @@ namespace WarOfTwoSides.Models.Characters.Aliance
 		)
 		{
 
-			this.Holy = Default_Value.PRIEST_DEFAULT_HOLY;
+			base.Holy = Default_Value.PRIEST_DEFAULT_HOLY;
 
 		}
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarOfTwoSides.Models.Utilitys.Weapons.IWeapons
+namespace WarOfTwoSides.Models.Utilitys.Weapons.IWeapon
 {
 	public class IWeapons
 	{
@@ -15,5 +15,7 @@ namespace WarOfTwoSides.Models.Utilitys.Weapons.IWeapons
 		public int MagicDemage { get; set; }
 
 		public int Durability { get; set; }
+
+		public bool Broken { get; set; }
 	}
 }
