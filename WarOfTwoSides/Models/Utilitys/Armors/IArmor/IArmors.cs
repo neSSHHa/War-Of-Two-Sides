@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace WarOfTwoSides.Models.Utilitys.Armors.IArmor
 {
-    public class IArmors
+    public interface IArmors
     {
-		public string Name { get; set; }
-
-		public int MaginEndurance { get; set; }
+		public int MagicEndurance { get; set; }
 		public int AttackEndurance { get; set; }
 		
 		public int Durability { get; set; }

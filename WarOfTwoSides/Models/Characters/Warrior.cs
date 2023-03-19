@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WarOfTwoSides.Models.Characters.Aliance;
 using WarOfTwoSides.Models.Characters.ICharacters;
 using WarOfTwoSides.Models.Utilitys.Armors.IArmor;
 using WarOfTwoSides.Models.Utilitys.Weapons.IWeapon;
@@ -149,5 +150,16 @@ namespace WarOfTwoSides.Models.Characters
 			this.Stance = Stances.block;
 		}
 		public abstract void SpecialAttack(IWarrior warrior);
+
+		public override string ToString()
+		{
+			return "Name: " + Name + "\n" +
+				"Health: " + this.BaseHealth + "\n" +
+				"Strenght: " + this.BaseStrenght + "\n" +
+				"Attack Demage: " + this.BaseAttackDemage + "\n" +
+				"Magic Demage: " + this.BaseMagicDemage + "\n" +
+				"Faction: " + Faction.ToString() + "\n";
+		}
+
 	}
 }

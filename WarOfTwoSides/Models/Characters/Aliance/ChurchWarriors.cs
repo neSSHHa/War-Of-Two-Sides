@@ -29,14 +29,5 @@ namespace WarOfTwoSides.Models.Characters.Aliance
 
 		}
 
-		public abstract void Attack(IWarrior warrior)
-		{
-			throw new NotImplementedException();
-		}
-
-		public abstract void SpecialAttack(IWarrior warrior)
-		{
-			throw new NotImplementedException();
-		}
 	}
 }
