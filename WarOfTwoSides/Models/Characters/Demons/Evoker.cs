@@ -12,9 +12,9 @@ namespace WarOfTwoSides.Models.Characters.Demons
 {
 	public class Evoker : Warrior
 	{
-		private int beastSpawned;
+		private int _beastSpawned;
 
-		public int BeastSpawned { get => beastSpawned; set => beastSpawned = value; }
+		public int BeastSpawned { get => _beastSpawned; set => _beastSpawned = value; }
 
 		public Evoker(string name = "Evoker")
 		: base
@@ -39,20 +39,20 @@ namespace WarOfTwoSides.Models.Characters.Demons
 			Console.WriteLine(base.Name + " has attacked " + warrior.Name);
 			warrior.Stance = Stances.attack;
 
-			double totalAttackDemage = 0;
+			double totalAttackDemage = 1;
 			double totalMagicDemage = base.BaseMagicDemage;
 			double totalDemage = 0;
 			double totalHealhDealt = 0;
-			double totalArmorPenetratedAttackDemage = 0;
-			double totalArmorPenetratedMagicDemage = 0;
-			double totalArmorPenetratedDemage = 0;
+			double totalArmorPenetratedAttackDemage = 1;
+			double totalArmorPenetratedMagicDemage = 1;
+			double totalArmorPenetratedDemage = 1;
 
 			if (!(Weapon.Durability < 1))
 			{
 				Console.ForegroundColor = ConsoleColor.Red;
 				totalMagicDemage *= Weapon.MagicDemage + this.BeastSpawned * 10;
 
-				totalDemage += totalAttackDemage + totalMagicDemage;
+				totalDemage = totalAttackDemage + totalMagicDemage;
 
 				Console.WriteLine("Total magic demage: " + totalMagicDemage);
 				Console.WriteLine("Total beast spawned " + this.BeastSpawned);
@@ -72,15 +72,15 @@ namespace WarOfTwoSides.Models.Characters.Demons
 			else
 			{
 				Console.ForegroundColor = ConsoleColor.Cyan;
-				Console.WriteLine(warrior.Arrmor + " armor is broken...");
+				Console.WriteLine(" armor is broken...");
 			}
 
 			totalMagicDemage /= totalArmorPenetratedMagicDemage;
 			Console.ForegroundColor = ConsoleColor.Red;
-			Console.WriteLine(warrior.Arrmor + " Total armor penetrated attack demage: " + (totalAttackDemage - (totalAttackDemage / totalArmorPenetratedAttackDemage)));
-			Console.WriteLine(warrior.Arrmor + " Total armor penetrated magic demage: " + (totalMagicDemage - (totalMagicDemage / totalArmorPenetratedMagicDemage)));
+			Console.WriteLine(" Total armor penetrated attack demage: " + (totalAttackDemage - (totalAttackDemage / totalArmorPenetratedAttackDemage)));
+			Console.WriteLine(" Total armor penetrated magic demage: " + (totalMagicDemage - (totalMagicDemage / totalArmorPenetratedMagicDemage)));
 			totalArmorPenetratedDemage = (totalMagicDemage - (totalMagicDemage / totalArmorPenetratedMagicDemage)) + (totalAttackDemage - (totalAttackDemage / totalArmorPenetratedAttackDemage));
-			Console.WriteLine(warrior.Arrmor + " Total armor penetrated demage: " + totalArmorPenetratedDemage);
+			Console.WriteLine(" Total armor penetrated demage: " + totalArmorPenetratedDemage);
 
 			totalHealhDealt = totalAttackDemage + totalMagicDemage;
 

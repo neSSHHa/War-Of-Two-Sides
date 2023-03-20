@@ -9,65 +9,65 @@ namespace WarOfTwoSides.Models.DefaultValues
 	public static class Default_Value
 	{
 		public const int ALIANCE_DEFAULT_HEALTH = 100;
-		public const int ALIANCE_DEFAULT_STRENGHT = 3;
+		public const int ALIANCE_DEFAULT_STRENGHT = 8;
 		public const int ALIANCE_DEFAULT_ATTACK_DEMAGE = 2;
 		public const int ALIANCE_DEFAULT_MAGIC_DEMAGE = 1;
 		public const Faction ALIANCE_DEFAULT_FACTION = Faction.Aliance;
 
 		public const int SOLDIER_HEALTH = 0;
-		public const int SOLDIER_STRENGHT = 1;
+		public const int SOLDIER_STRENGHT = 10;
 		public const int SOLDIER_DEFAULT_ATTACK_DEMAGE = 1;
 		public const int SOLDIER_DEFAULT_MAGIC_DEMAGE = 0;
 
 		public const int PRIEST_HEALTH = 0;
-		public const int PRIEST_STRENGHT = 1;
+		public const int PRIEST_STRENGHT = 10;
 		public const int PRIEST_DEFAULT_ATTACK_DEMAGE = 1;
-		public const int PRIEST_DEFAULT_MAGIC_DEMAGE = 7;
-		public const int PRIEST_DEFAULT_HOLY = 10;
+		public const int PRIEST_DEFAULT_MAGIC_DEMAGE = 6;
+		public const int PRIEST_DEFAULT_HOLY = 8;
 
 		public const int PALADIN_HEALTH = 10;
-		public const int PALADIN_STRENGHT = 3;
+		public const int PALADIN_STRENGHT = 12;
 		public const int PALADIN_DEFAULT_ATTACK_DEMAGE = 4;
 		public const int PALADIN_DEFAULT_MAGIC_DEMAGE = 5;
 		public const int PALADIN_DEFAULT_HOLY = 5;
 
 		public const int MONK_HEALTH = 5;
-		public const int MONK_STRENGHT = 2;
+		public const int MONK_STRENGHT = 15;
 		public const int MONK_DEFAULT_ATTACK_DEMAGE = 3;
 		public const int MONK_DEFAULT_MAGIC_DEMAGE = 5;
 
 		public const int MAGE_HEALTH = 0;
-		public const int MAGE_STRENGHT = 1;
+		public const int MAGE_STRENGHT = 8;
 		public const int MAGE_DEFAULT_ATTACK_DEMAGE = 1;
-		public const int MAGE_DEFAULT_MAGIC_DEMAGE = 9;
+		public const int MAGE_DEFAULT_MAGIC_DEMAGE = 15;
 		public const int MAGE_DEFAULT_MANA = 100;
 
 		public const int DEMON_HUNTER_HEALTH = 15;
-		public const int DEMON_HUNTER_STRENGHT = 5;
+		public const int DEMON_HUNTER_STRENGHT = 15;
 		public const int DEMON_HUNTER_DEFAULT_ATTACK_DEMAGE = 4;
 		public const int DEMON_HUNTER_DEFAULT_MAGIC_DEMAGE = 4;
 
-		public const int DEMON_HEALTH = 10;
+		public const int DEMON_HEALTH = 5;
 		public const int DEMON_STRENGHT = 3;
 		public const int DEMON_DEFAULT_ATTACK_DEMAGE = 3;
 		public const int DEMON_DEFAULT_MAGIC_DEMAGE = 3;
 
-		public const int DEATHKING_HEALTH = 20;
+		public const int DEATHKING_HEALTH = 5;
 		public const int DEATHKING_STRENGHT = 3;
-		public const int DEATHKING_DEFAULT_ATTACK_DEMAGE = 5;
+		public const int DEATHKING_DEFAULT_ATTACK_DEMAGE = 3;
 		public const int DEATHKING_DEFAULT_MAGIC_DEMAGE = 2;
 
 		public const int EVOKER_HEALTH = 0;
-		public const int EVOKER_STRENGHT = 1;
+		public const int EVOKER_STRENGHT = 2;
 		public const int EVOKER_DEFAULT_ATTACK_DEMAGE = 1;
 		public const int EVOKER_DEFAULT_MAGIC_DEMAGE = 3;
 
-		public const int HUNTER_HEALTH = 10;
+		public const int HUNTER_HEALTH = 5;
 		public const int HUNTER_STRENGHT = 2;
 		public const int HUNTER_DEFAULT_ATTACK_DEMAGE = 2;
 		public const int HUNTER_DEFAULT_MAGIC_DEMAGE = 1;
 
-		public const int ROGUE_HEALTH = 10;
+		public const int ROGUE_HEALTH = 5;
 		public const int ROGUE_STRENGHT = 2;
 		public const int ROGUE_DEFAULT_ATTACK_DEMAGE = 2;
 		public const int ROGUE_DEFAULT_MAGIC_DEMAGE = 1;
@@ -76,13 +76,13 @@ namespace WarOfTwoSides.Models.DefaultValues
 		public const int WARLOCK_STRENGHT = 1;
 		public const int WARLOCK_DEFAULT_ATTACK_DEMAGE = 1;
 		public const int WARLOCK_DEFAULT_MAGIC_DEMAGE = 2;
-		public const int WARLOCK_DEFAULT_KNOWLEDGE = 10;
+		public const int WARLOCK_DEFAULT_KNOWLEDGE = 5;
 
 
-		public const int DEMONS_DEFAULT_HEALTH = 80;
-		public const int DEMONS_DEFAULT_STRENGHT = 5;
-		public const int DEMONS_DEFAULT_ATTACK_DEMAGE = 4;
-		public const int DEMONS_DEFAULT_MAGIC_DEMAGE = 3;
+		public const int DEMONS_DEFAULT_HEALTH = 90;
+		public const int DEMONS_DEFAULT_STRENGHT = 2;
+		public const int DEMONS_DEFAULT_ATTACK_DEMAGE = 2;
+		public const int DEMONS_DEFAULT_MAGIC_DEMAGE = 2;
 		public const Faction DEMONS_DEFAULT_FACTION = Faction.Demons;
 
 
@@ -134,32 +134,32 @@ namespace WarOfTwoSides.Models.DefaultValues
 
 
 
-		public const int ROYALBLOODARMOR_MAGIC_ENDURANCE = 2;
-		public const int ROYALBLOODARMOR_ATTACK_ENDURANCE = 4;
+		public const int ROYALBLOODARMOR_MAGIC_ENDURANCE = 8;
+		public const int ROYALBLOODARMOR_ATTACK_ENDURANCE = 10;
 		public const int ROYALBLOODARMOR_DURABILITY = 150;
 
-		public const int LIGHTARMOR_MAGIC_ENDURANCE = 1;
-		public const int LIGHTARMOR_ATTACK_ENDURANCE = 2;
+		public const int LIGHTARMOR_MAGIC_ENDURANCE = 6;
+		public const int LIGHTARMOR_ATTACK_ENDURANCE = 8;
 		public const int LIGHTARMOR_DURABILITY = 70;
 
-		public const int LEATHERARMOR_MAGIC_ENDURANCE = 1;
-		public const int LEATHERARMOR_ATTACK_ENDURANCE = 1;
+		public const int LEATHERARMOR_MAGIC_ENDURANCE = 5;
+		public const int LEATHERARMOR_ATTACK_ENDURANCE = 7;
 		public const int LEATHERARMOR_DURABILITY = 40;
 
-		public const int HOLYVESTMENTS_MAGIC_ENDURANCE = 10;
+		public const int HOLYVESTMENTS_MAGIC_ENDURANCE = 25;
 		public const int HOLYVESTMENTS_ATTACK_ENDURANCE = 1;
 		public const int HOLYVESTMENTS_DURABILITY = 10;
 
-		public const int DEMONSKIN_MAGIC_ENDURANCE = 4;
-		public const int DEMONSKIN_ATTACK_ENDURANCE = 4;
+		public const int DEMONSKIN_MAGIC_ENDURANCE = 10;
+		public const int DEMONSKIN_ATTACK_ENDURANCE = 10;
 		public const int DEMONSKIN_DURABILITY = 1000;
 
-		public const int COWL_MAGIC_ENDURANCE = 1;
-		public const int COWL_ATTACK_ENDURANCE = 1;
+		public const int COWL_MAGIC_ENDURANCE = 4;
+		public const int COWL_ATTACK_ENDURANCE = 4;
 		public const int COWL_DURABILITY = 10;
 
 		public const int CHAINARMOR_MAGIC_ENDURANCE = 1;
-		public const int CHAINARMOR_ATTACK_ENDURANCE = 3;
+		public const int CHAINARMOR_ATTACK_ENDURANCE = 30;
 		public const int CHAINARMOR_DURABILITY = 100;
 
 	}

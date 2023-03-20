@@ -99,11 +99,14 @@ namespace WarOfTwoSides
 		public void fight(IList<Warrior> aliance, IList<Warrior> demons)
 		{
 
+			int aliancecount = aliance.Count;
+			int demonscount = demons.Count;
+
 			Random r = new Random();
-			while(aliance.Count > 0 && demons.Count > 0)
+			while(aliancecount > 0 && demonscount > 0)
 			{
-				var aliwarrior = aliance.ElementAt(r.Next(aliance.Count));
-				var demowarrior = demons.ElementAt(r.Next(demons.Count));
+				var aliwarrior = aliance.ElementAt(r.Next(aliancecount));
+				var demowarrior = demons.ElementAt(r.Next(demonscount));
 
 				if(aliwarrior is Prist)
 				{
@@ -120,10 +123,13 @@ namespace WarOfTwoSides
 				if(demowarrior.BaseHealth < 1)
 				{
 					demons.Remove(demowarrior);
+					demonscount--;
+					if (demonscount == 0)
+						break;
 				}
 
-				var aliwarrior2 = aliance.ElementAt(r.Next(aliance.Count));
-				var demowarrior2 = demons.ElementAt(r.Next(demons.Count));
+				var aliwarrior2 = aliance.ElementAt(r.Next(aliancecount));
+				var demowarrior2 = demons.ElementAt(r.Next(demonscount));
 
 				if (demowarrior2 is Evoker)
 				{
@@ -148,18 +154,37 @@ namespace WarOfTwoSides
 				if (aliwarrior2.BaseHealth < 1)
 				{
 					aliance.Remove(aliwarrior2);
+					aliancecount--;
+					if (aliancecount == 0)
+						break;
 				}
 
 			}
-			Console.ForegroundColor = ConsoleColor.Blue;
+			
 			if(aliance.Count > 0)
 			{
+				Console.ForegroundColor = ConsoleColor.Yellow;
 				Console.WriteLine("aliance has winned");
+				Console.WriteLine("The end result are here: ");
+				foreach (var item in aliance)
+				{
+					Console.WriteLine(item);
+				}
 			}
 			else
 			{
+				Console.ForegroundColor = ConsoleColor.Magenta;
 				Console.WriteLine("demons has winned");
+				Console.WriteLine("The end result are here: ");
+				foreach(var item in demons)
+				{
+					Console.WriteLine(item);
+				}
 			}
+
+			
+			
+
 		}
 
 

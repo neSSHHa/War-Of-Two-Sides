@@ -78,7 +78,7 @@ namespace WarOfTwoSides.Models.Characters
 			}
 			set
 			{
-				this._baseHealt = value;
+				this._baseStrenght = value;
 			}
 		}
 

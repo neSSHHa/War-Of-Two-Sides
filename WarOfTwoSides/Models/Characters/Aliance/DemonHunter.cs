@@ -42,7 +42,7 @@ namespace WarOfTwoSides.Models.Characters.Aliance
 		{
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.WriteLine(base.Name + " has attacked " + warrior.Name);
-			if ((warrior.Stance == Stances.block) || (warrior.Arrmor.Durability > 1))
+			if ((warrior.Stance == Stances.block))
 			{
 				Console.ForegroundColor = ConsoleColor.Red;
 				Console.WriteLine(warrior.Name + " is in block position, the armor will be penetrated as well ");
@@ -57,16 +57,16 @@ namespace WarOfTwoSides.Models.Characters.Aliance
 				double totalMagicDemage = base.BaseMagicDemage;
 				double totalDemage = 0;
 				double totalHealhDealt = 0;
-				double totalArmorPenetratedAttackDemage = 0;
-				double totalArmorPenetratedMagicDemage = 0;
-				double totalArmorPenetratedDemage = 0;
+				double totalArmorPenetratedAttackDemage = 1;
+				double totalArmorPenetratedMagicDemage = 1;
+				double totalArmorPenetratedDemage = 1;
 
 				if (!(Weapon.Durability < 1))
 				{
 					totalAttackDemage *= Weapon.AttackDemage;
 					totalMagicDemage *= Weapon.MagicDemage;
 
-					totalDemage += totalAttackDemage + totalMagicDemage + DemonKilled * DemonKilled;
+					totalDemage = totalAttackDemage + totalMagicDemage + DemonKilled * DemonKilled;
 					Console.WriteLine("Total demon killed for bonus demage: " + DemonKilled);
 					Console.WriteLine("Total attack demage: " + totalAttackDemage);
 					Console.WriteLine("Total magic demage: " + totalMagicDemage);
@@ -87,16 +87,16 @@ namespace WarOfTwoSides.Models.Characters.Aliance
 				else
 				{
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine(warrior.Arrmor + " armor is broken...");
+					Console.WriteLine(" armor is broken...");
 				}
 
 				totalAttackDemage /= totalArmorPenetratedAttackDemage;
 				totalMagicDemage /= totalArmorPenetratedMagicDemage;
 				Console.ForegroundColor = ConsoleColor.Cyan;
-				Console.WriteLine(warrior.Arrmor + " Total armor penetrated attack demage: " + (totalAttackDemage - (totalAttackDemage / totalArmorPenetratedAttackDemage)));
-				Console.WriteLine(warrior.Arrmor + " Total armor penetrated magic demage: " + (totalMagicDemage - (totalMagicDemage / totalArmorPenetratedMagicDemage)));
+				Console.WriteLine(" Total armor penetrated attack demage: " + (totalAttackDemage - (totalAttackDemage / totalArmorPenetratedAttackDemage)));
+				Console.WriteLine(" Total armor penetrated magic demage: " + (totalMagicDemage - (totalMagicDemage / totalArmorPenetratedMagicDemage)));
 				totalArmorPenetratedDemage = (totalMagicDemage - (totalMagicDemage / totalArmorPenetratedMagicDemage)) + (totalAttackDemage - (totalAttackDemage / totalArmorPenetratedAttackDemage));
-				Console.WriteLine(warrior.Arrmor + " Total armor penetrated demage: " + totalArmorPenetratedDemage);
+				Console.WriteLine(" Total armor penetrated demage: " + totalArmorPenetratedDemage);
 
 				totalHealhDealt = totalAttackDemage + totalMagicDemage;
 
